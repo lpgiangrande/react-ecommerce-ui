@@ -1,0 +1,48 @@
+:root {
+    --orange: #c04d00;
+    --lighter-orange: #e57636;
+    --offwhite: #f8f8f8;
+    --light-grey: #f0f0f0;
+    --medium-grey: #888888;
+    --dark-grey: #222222;
+  
+    --font: 'Lato', sans-serif;
+  }
+  
+  .brand-name {
+    font-weight: bold;
+    color: var(--orange);
+    text-transform: capitalize;
+  }
+  
+  .product-title {
+    font-weight: bold;
+    color: var(--dark-grey);
+  }
+  
+  .product-description-text {
+    font-family: var(--font);
+    color: var(--light-grey);
+  }
+  
+  .current-price {
+    font-weight: bold;
+    color: var(--dark-grey);
+  }
+  
+  .old-price {
+    font-weight: bold;
+    color: var(--dark-grey);
+  }
+
+  .responsiveNavLinks{
+    font-weight: bold;
+    color: var(--dark-grey);
+  }
+  
+  body {
+    background-color: var(--offwhite);
+    color: var(--medium-grey);
+    font-family: var(--font);
+  }
+
