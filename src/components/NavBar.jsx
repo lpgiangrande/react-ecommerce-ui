@@ -11,14 +11,18 @@ function Navigation() {
     setShowModal(!showModal);
   };
 
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <>
       <Navbar expand="md" id={styles.navbar} className="fixed-top mt-3 pb-4" collapseOnSelect={false}>
         <Container>
-          <div className={styles.burgerIcon} onClick={handleToggleModal}>
-            <div className={showModal ? styles.burgerLineActive : styles.burgerLine} />
-            <div className={showModal ? styles.burgerLineActive : styles.burgerLine} />
-            <div className={showModal ? styles.burgerLineActive : styles.burgerLine} />
+          <div onClick={handleToggleModal} className={`${styles.burgerIcon}`}>
+            <div className={styles.burgerLine} />
+            <div className={styles.burgerLine} />
+            <div className={styles.burgerLine} />
           </div>
           <Navbar.Brand href="#home" className="order-1 order-md-2 ms-4 pb-2">
             <img src="/images/logo.svg" alt="logo sneakers.com" />
@@ -52,24 +56,10 @@ function Navigation() {
           </Nav>
         </Container>
       </Navbar>
-      {/* {showModal && (
-        <div className={styles.customModal}>
-          <div className={styles.customModalContent}>
-            <nav className="flex-column">
-              <a href="#link1">Collections</a>
-              <a href="#link2">Men</a>
-              <a href="#link3">Women</a>
-              <a href="#link4">About</a>
-              <a href="#link5">Contact</a>
-            </nav>
-          </div>
-        </div>
-      )} */}
-
       <Modal 
         show={showModal} 
         dialogClassName={styles.customModal}
-        onHide={handleToggleModal}
+        onHide={handleCloseModal}
         fullscreen={fullscreen}
         contentClassName={styles.customModalContent}
       >
