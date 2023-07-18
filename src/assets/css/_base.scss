@@ -1,17 +1,20 @@
 :root {
     --orange: #c04d00;
-    --lighter-orange: #e57636;
+    --light-orange: #e57636;
+    --lighter-orange: #f7e0d3;
     --offwhite: #f8f8f8;
     --light-grey: #f0f0f0;
-    --medium-grey: #888888;
+    --medium-grey: #a6a6a6;
     --dark-grey: #222222;
   
     --font: 'Lato', sans-serif;
   }
   
+  // PRODUCT DESCRIPTION
+
   .brandName {
     font-weight: bold;
-    color: var(--orange);
+    color: var(--light-orange);
     text-transform: uppercase;
   }
   
@@ -27,14 +30,27 @@
     font-size: 0.9em;
   }
   
-  .currentPrice{
+  .currentPrice {
     font-weight: bold;
+    font-size: 1.3em;
     color: var(--dark-grey);
   }
   
   .oldPrice {
     font-weight: bold;
-    color: var(--dark-grey);
+    color: var(--medium-grey);
+    font-weight:400;
+    text-decoration: line-through;
+  }
+
+  .discountTag {
+    padding:1px 4px;
+    margin-left: 15px;
+    background-color: var(--lighter-orange);
+    color: var(--light-orange);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.7em;
   }
 
   .responsiveNavLinks{
