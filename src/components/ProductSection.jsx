@@ -9,12 +9,12 @@ export default function ProductSection() {
   return (
     <div className={`container d-flex justify-content-center align-items-center ${styles.productSection} ${styles.verticalCenter}`}>
       <div className="row">
-        <div className="col-md-6 px-0">
+        <div className="col-md-6">
           <div className={styles.carouselContainer}> 
             <CustomCarousel />
           </div>
         </div>
-        <div className="col-md-6 px-0">
+        <div className="col-md-6">
           <ProductDescription />
           <QuantityCounterWithAddToCartButton />
         </div>

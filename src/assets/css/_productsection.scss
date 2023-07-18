@@ -1,0 +1,29 @@
+.buttonAddToCart{
+    background-color: var(--light-orange);
+    color: var(--offwhite);
+    padding: 5px 40px;
+    border-radius: 10px;
+    font-size: 10px;
+    height: 30px;
+    border: none;
+    box-shadow: 1px 9px 19px -5px rgba(179,179,179,0.45);
+    -webkit-box-shadow: 1px 9px 19px -5px rgba(179,179,179,0.45);
+    -moz-box-shadow: 1px 9px 19px -5px rgba(179,179,179,0.45);
+}
+
+
+.buttonsQuantity {
+    border-radius: 10px;
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    border-radius: 10px;
+    box-shadow: 1px 9px 19px 1px rgba(179,179,179,0.45);
+    -webkit-box-shadow: 1px 9px 19px 1px rgba(179,179,179,0.45);
+    -moz-box-shadow: 1px 9px 19px 1px rgba(179,179,179,0.45);
+    & button {
+        color: var(--orange);
+        border: none;
+        background-color: var(--light-grey);
+    }
+  }
+  

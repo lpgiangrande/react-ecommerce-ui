@@ -26,6 +26,17 @@
   background-color: black;
 }
 
+// LINKS
+
+.navLinks a {
+  color: var(--dark-grey);
+  font-weight: bold;
+  &:hover {
+    color: var(--medium-grey);
+    font-weight: bold;
+  }
+}
+
 // MODAL 1
 
 .customHeader {
@@ -41,17 +52,6 @@
   z-index: 1050;
   padding-right: 30%; 
   background-color: transparent; 
-}
-
-// LINKS
-
-.navLinks a {
-  color: var(--dark-grey);
-  font-weight: bold;
-  &:hover {
-    color: var(--medium-grey);
-    font-weight: bold;
-  }
 }
 
 // MODAL 2
