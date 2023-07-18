@@ -3,22 +3,32 @@ import { Container, Modal, Navbar, Nav } from 'react-bootstrap';
 import styles from "../assets/css/App.module.scss";
 
 function Navigation() {
-  const [showModal, setShowModal] = useState(false);
+  const [showFirstModal, setShowFirstModal] = useState(false);
+  const [showSecondModal, setShowSecondModal] = useState(false);
   const [fullscreen, setFullscreen] = useState(true);
 
-  const handleToggleModal = () => {
-    setShowModal(!showModal);
+  const handleToggleFirstModal = () => {
+    setShowFirstModal(!showFirstModal);
   };
 
-  const handleCloseModal = () => {
-    setShowModal(false);
+  const handleCloseFirstModal = () => {
+    setShowFirstModal(false);
+  };
+
+
+  const handleToggleSecondModal = () => {
+    setShowSecondModal(!showSecondModal);
+  };
+
+  const handleCloseSecondModal = () => {
+    setShowSecondModal(false);
   };
 
   return (
     <>
       <Navbar expand="md" id={styles.navbar} className="fixed-top mt-3 pb-4" collapseOnSelect={false}>
         <Container>
-          <div onClick={handleToggleModal} className={`${styles.burgerIcon}`}>
+          <div onClick={handleToggleFirstModal} className={`${styles.burgerIcon}`}>
             <div className={styles.burgerLine} />
             <div className={styles.burgerLine} />
             <div className={styles.burgerLine} />
@@ -36,7 +46,26 @@ function Navigation() {
             </Nav>
           </Navbar.Collapse>
           <Nav className="ms-auto order-3 order-md-4 d-flex flex-row">
-            <Nav.Link href="#link6" className="d-flex align-items-center me-4">
+            <Nav.Link 
+              href="#link6" 
+              className={`d-flex align-items-center me-4 ${styles.cartIcon}`}
+              onMouseEnter={handleToggleSecondModal}
+              onMouseLeave={handleCloseSecondModal}
+            >
+              {/* SECOND MODAL */}
+              <Modal 
+                show={showSecondModal} 
+                onHide={handleCloseSecondModal} 
+                dialogClassName={styles.customSecondModal}
+                contentClassName={styles.customSecondModalContent}
+              >
+                <Modal.Header>
+                  <Modal.Title>Cart</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <p className='pt-5 pb-5 text-center'>Your cart is empty.</p>
+                </Modal.Body>
+              </Modal>
               <div>
                 <svg
                   className={styles.cartIcon}
@@ -55,10 +84,11 @@ function Navigation() {
           </Nav>
         </Container>
       </Navbar>
+      {/* FIRST MODAL */}
       <Modal 
-        show={showModal} 
+        show={showFirstModal} 
         dialogClassName={styles.customModal}
-        onHide={handleCloseModal}
+        onHide={handleCloseFirstModal}
         fullscreen={fullscreen}
         contentClassName={styles.customModalContent}
       >
@@ -67,7 +97,7 @@ function Navigation() {
             <button
               className="btn-close"
               aria-label="Close"
-              onClick={handleToggleModal}
+              onClick={handleToggleFirstModal}
             />
           </Modal.Title>
         </Modal.Header>

@@ -2,13 +2,9 @@
     border-bottom: 2px solid var(--light-grey);
 }
 
-.avatar {
+.avatar, .cartIcon {
   width: 25px;
   height: auto;
-}
-
-.cartIcon{
-  width: 25px;
 }
 
 // BURGER
@@ -30,7 +26,7 @@
   background-color: black;
 }
 
-// MODAL
+// MODAL 1
 
 .customHeader {
   border-bottom: none!important;
@@ -48,6 +44,7 @@
 }
 
 // LINKS
+
 .navLinks a {
   color: var(--dark-grey);
   font-weight: bold;
@@ -56,3 +53,10 @@
     font-weight: bold;
   }
 }
+
+// MODAL 2
+
+.customSecondModal {
+  width: 350px!important;
+}
+
