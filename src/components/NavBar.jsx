@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Container, Modal, Navbar, Nav } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from "../assets/css/App.module.scss";
 
 function Navigation() {

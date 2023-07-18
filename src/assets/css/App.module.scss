@@ -3,69 +3,26 @@ of the application and is automatically applied to it */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 @import './_base.scss';
+@import './_nav.scss';
 @import './_mobile.scss';
 
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  // max-width: 1280px;
+  // margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  // text-align: center;
 }
 
-#navbar{
-  border-bottom: 2px solid var(--light-grey);
+.content {
+  margin-top: 100px; /* Adjust the margin as needed to push content below the navbar */
+  padding-bottom: 100px; /* Adjust the padding as needed to create space for the footer */
+  border: 7px solid orange;
 }
-.avatar {
-  width: 25px;
-  height: auto;
-}
-.cartIcon{
-  width: 25px;
-}
-
-// BURGER
-
-.burgerIcon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 20px;
-  cursor: pointer;
-  padding: 3px;
-  margin-top: 5px;
-}
-
-.burgerLine {
-  width: 100%;
-  height: 2px;
-  background-color: black;
-}
-
-// MODAL
-
-.customHeader {
-  border-bottom: none!important;
-  background-color: transparent;
-}
-
-.customModal {
+footer {
   position: fixed;
-  top: 0;
-  left: 0;
   bottom: 0;
-  z-index: 1050;
-  padding-right: 30%; 
-  background-color: transparent; 
-}
-
-// LINKS
-.navLinks a {
-  color: var(--dark-grey);
-  font-weight: bold;
-  &:hover {
-    color: var(--medium-grey);
-    font-weight: bold;
-  }
+  width: 100%;
+  height: 60px; /* Adjust the height as needed for your footer */
+  // border: 7px solid orange;
 }
