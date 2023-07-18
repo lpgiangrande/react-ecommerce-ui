@@ -8,6 +8,9 @@ export default function QuantityCounter() {
   const decrementQuantity = () => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
+    } else if (quantity === 0 && addedToCart) {
+      setAddedToCart(false);
+      setCartQuantity(0);
     }
   };
 
@@ -16,9 +19,10 @@ export default function QuantityCounter() {
   };
 
   const handleAddToCart = () => {
-    if (quantity > 0) {
+    if (quantity >= 0) {
       setCartQuantity(quantity);
       setAddedToCart(true);
+      // Call the callback function or perform any other logic here
     }
   };
 
@@ -31,7 +35,7 @@ export default function QuantityCounter() {
           <button className="ms-3" onClick={incrementQuantity}>+</button>
         </div>
         <div className="d-inline-block">
-          <button onClick={handleAddToCart} disabled={quantity === 0}>
+          <button onClick={handleAddToCart} disabled={quantity === 0 && !addedToCart}>
             Add to cart
           </button>
         </div>
