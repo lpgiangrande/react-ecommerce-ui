@@ -1,0 +1,27 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "productImages":["https://imgur.com/whMHW03", "https://imgur.com/TCcfQnr", "https://imgur.com/fQZOeya", "https://imgur.com/whMHW03"],
+        "productThumbnails":["https://imgur.com/UI7FO5z", "https://imgur.com/ViQv8ZC", "https://imgur.com/M5NfUNB", "https://imgur.com/hONDvj8"],
+        "brand": "Sneaker Company",
+        "productName": "Fall Limited Edition Sneakers",
+        "description": "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
+        "price": 250
+      },
+      {
+        "id": 2,
+        "brand": "Adidas",
+        "productName": "Stan Smith",
+        "description": "The Adidas Stan Smith is an iconic tennis shoe with a clean and minimalistic design.",
+        "price": 80
+      },
+      {
+        "id": 3,
+        "brand": "Puma",
+        "productName": "Clyde Court",
+        "description": "The Puma Clyde Court is a basketball shoe designed for performance and style on the court.",
+        "price": 110
+      }
+    ]
+  }
