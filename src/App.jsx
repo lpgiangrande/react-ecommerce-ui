@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './components/NavBar'
 import ProductSection from './components/ProductSection'
-import Carousel from './components/Carousel'
+import CustomCarousel from './components/CustomCarousel'
 import ProductDescription from './components/ProductDescription'
 import QuantityCounterWithAddToCartButton from './components/QuantityCounterWithAddToCartButton';
 import Footer from './components/Footer'
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <NavBar />
         <ProductSection>
-          <Carousel />
+          <CustomCarousel />
           <ProductDescription />
           <QuantityCounterWithAddToCartButton />
         </ProductSection>

@@ -23,6 +23,7 @@ function Navigation() {
   const handleCloseSecondModal = () => {
     setShowSecondModal(false);
   };
+  
 
   return (
     <>
@@ -58,6 +59,7 @@ function Navigation() {
                 onHide={handleCloseSecondModal} 
                 dialogClassName={styles.customSecondModal}
                 contentClassName={styles.customSecondModalContent}
+
               >
                 <Modal.Header>
                   <Modal.Title>Cart</Modal.Title>

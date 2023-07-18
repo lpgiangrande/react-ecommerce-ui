@@ -9,28 +9,30 @@
     --font: 'Lato', sans-serif;
   }
   
-  .brand-name {
+  .brandName {
     font-weight: bold;
     color: var(--orange);
-    text-transform: capitalize;
+    text-transform: uppercase;
   }
   
-  .product-title {
+  .productTitle {
     font-weight: bold;
     color: var(--dark-grey);
+    padding-bottom: 10px;
   }
   
-  .product-description-text {
+  .productDescription {
     font-family: var(--font);
-    color: var(--light-grey);
+    color: var(--medium-grey);
+    font-size: 0.9em;
   }
   
-  .current-price {
+  .currentPrice{
     font-weight: bold;
     color: var(--dark-grey);
   }
   
-  .old-price {
+  .oldPrice {
     font-weight: bold;
     color: var(--dark-grey);
   }
@@ -44,5 +46,6 @@
     background-color: var(--offwhite);
     color: var(--medium-grey);
     font-family: var(--font);
+    font-size: 16px;
   }
 
