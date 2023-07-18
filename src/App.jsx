@@ -13,18 +13,15 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <div className={styles.content}>
         <ProductSection>
           <Carousel />
-          <ProductDescription>
-            <QuantityCounter />
-            <AddToCartButton />
-          </ProductDescription>
+          <ProductDescription />
+          <QuantityCounter />
+          <AddToCartButton />
         </ProductSection>
-      </div>
       <Footer />
     </div>
-  )
+  );
 }
 
 export default App
