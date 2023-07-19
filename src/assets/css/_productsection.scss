@@ -1,4 +1,5 @@
 .buttonAddToCart{
+    cursor: pointer;
     background-color: var(--light-orange);
     color: var(--offwhite);
     padding: 5px 40px;
@@ -27,3 +28,7 @@
     }
   }
   
+  .buttonAddToCartIcon{ 
+    fill: var(--offwhite);
+    margin-right: 10px;
+  }
