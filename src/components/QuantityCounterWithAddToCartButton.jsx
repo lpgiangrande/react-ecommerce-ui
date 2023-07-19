@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from "../assets/css/App.module.scss";
 
 export default function QuantityCounter() {
   const [quantity, setQuantity] = useState(0);
@@ -22,20 +23,30 @@ export default function QuantityCounter() {
     if (quantity >= 0) {
       setCartQuantity(quantity);
       setAddedToCart(true);
-      // Call the callback function or perform any other logic here
     }
   };
 
   return (
     <div className="row mt-4">
       <div className="col">
-        <div className="d-inline-block me-5">
-          <button className="me-3" onClick={decrementQuantity}>-</button> 
+        <div className={`d-inline-block align-middle me-5 ${styles.buttonsQuantity}`}>
+          <button 
+            className="me-3" 
+            onClick={decrementQuantity}>
+            -
+          </button> 
           <span>{quantity}</span>
-          <button className="ms-3" onClick={incrementQuantity}>+</button>
+          <button className="ms-3" 
+            onClick={incrementQuantity}>
+            +
+          </button>
         </div>
-        <div className="d-inline-block">
-          <button onClick={handleAddToCart} disabled={quantity === 0 && !addedToCart}>
+        <div className="d-inline-block align-middle">
+          <button 
+            onClick={handleAddToCart} 
+            disabled={quantity === 0 && !addedToCart}
+            className={styles.buttonAddToCart}
+            > 
             Add to cart
           </button>
         </div>
