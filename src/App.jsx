@@ -3,7 +3,7 @@ import NavBar from './components/NavBar'
 import ProductSection from './components/ProductSection'
 import CustomCarousel from './components/CustomCarousel'
 import ProductDescription from './components/ProductDescription'
-import QuantityCounterWithAddToCartButton from './components/QuantityCounterWithAddToCartButton';
+import AddToCartModule from './components/AddToCartModule';
 import Footer from './components/Footer'
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <ProductSection>
           <CustomCarousel />
           <ProductDescription />
-          <QuantityCounterWithAddToCartButton />
+          <AddToCartModule />
         </ProductSection>
       <Footer />
     </div>

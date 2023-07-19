@@ -20,7 +20,9 @@ export default function QuantityCounter() {
   };
 
   const handleAddToCart = () => {
-    if (quantity >= 0) {
+    if (quantity > 0) {
+      // You can use the currentPrice here
+      console.log('Adding to cart:', currentPrice);
       setCartQuantity(quantity);
       setAddedToCart(true);
     }
