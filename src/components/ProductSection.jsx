@@ -9,13 +9,14 @@ import products from '../../products.json';
 export default function ProductSection() {
   // Manage the active product state
   const [activeProduct, setActiveProduct] = useState(products.products[0]);
+  console.log('active product', activeProduct.currentPrice);
 
   // Function to handle product toggle
   const handleProductToggle = (productId) => {
     const product = products.products.find((product) => product.id === productId);
     setActiveProduct(product);
   };
-
+ 
   return (
     <div className={`container d-flex justify-content-center align-items-center ${styles.productSection} ${styles.verticalCenter}`}>
       <div className="row">

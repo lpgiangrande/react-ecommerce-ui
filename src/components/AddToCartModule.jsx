@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import styles from "../assets/css/App.module.scss";
 
-export default function QuantityCounter() {
+export default function AddToCartModule({ currentPrice } ) {
   const [quantity, setQuantity] = useState(0);
   const [addedToCart, setAddedToCart] = useState(false);
-  const [cartQuantity, setCartQuantity] = useState(0);
+  const [displayQuantity, setdisplayQuantity] = useState(0); // quantity displayed between the "-" and "+" buttons
+  const [totaldisplayQuantity, setTotaldisplayQuantity] = useState(0); // overall quantity that has been added to the cart 
 
   const decrementQuantity = () => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
     } else if (quantity === 0 && addedToCart) {
       setAddedToCart(false);
-      setCartQuantity(0);
+      setdisplayQuantity(0);
     }
   };
 
@@ -21,11 +22,13 @@ export default function QuantityCounter() {
 
   const handleAddToCart = () => {
     if (quantity > 0) {
-      // You can use the currentPrice here
-      console.log('Adding to cart:', currentPrice);
-      setCartQuantity(quantity);
-      setAddedToCart(true);
-    }
+     // Add the selected quantity to the cart
+     setTotaldisplayQuantity(totaldisplayQuantity + quantity);
+     // Reset the displayed quantity back to zero <----
+     setQuantity(0);
+     // Mark as added to cart
+     setAddedToCart(true);
+    } 
   };
 
   return (
@@ -62,7 +65,7 @@ export default function QuantityCounter() {
           </button>
         </div>
       </div>
-      {addedToCart && <div>quantité ajoutée au panier : {cartQuantity}</div>}
+      {addedToCart && <div>quantité ajoutée au panier : {totaldisplayQuantity}</div>}
     </div>
   );
 }

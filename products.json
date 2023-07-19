@@ -17,7 +17,7 @@
         "productName": "Stan Smith",
         "description": "The Adidas Stan Smith is an iconic tennis shoe with a clean and minimalistic design.",
         "currentPrice": 80,
-        "discount" : 0,
+        "discount" : null,
         "oldPrice": null
       },
       {
@@ -26,7 +26,7 @@
         "productName": "Clyde Court",
         "description": "The Puma Clyde Court is a basketball shoe designed for performance and style on the court.",
         "currentPrice": 120,
-        "discount" : 0,
+        "discount" : null,
         "oldPrice": null
       }
     ]
