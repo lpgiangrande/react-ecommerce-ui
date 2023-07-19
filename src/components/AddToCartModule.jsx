@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import styles from "../assets/css/App.module.scss";
 
-export default function AddToCartModule({ currentPrice } ) {
+export default function AddToCartModule({ retrieveTotalQuantity }) {
   const [quantity, setQuantity] = useState(0);
   const [addedToCart, setAddedToCart] = useState(false);
-  const [displayQuantity, setdisplayQuantity] = useState(0); // quantity displayed between the "-" and "+" buttons
-  const [totaldisplayQuantity, setTotaldisplayQuantity] = useState(0); // overall quantity that has been added to the cart 
+  const [totalQuantity, setTotalQuantity] = useState(0); // overall quantity that has been added to the cart 
 
   const decrementQuantity = () => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
     } else if (quantity === 0 && addedToCart) {
       setAddedToCart(false);
-      setdisplayQuantity(0);
     }
   };
 
@@ -23,13 +21,17 @@ export default function AddToCartModule({ currentPrice } ) {
   const handleAddToCart = () => {
     if (quantity > 0) {
      // Add the selected quantity to the cart
-     setTotaldisplayQuantity(totaldisplayQuantity + quantity);
-     // Reset the displayed quantity back to zero <----
+     retrieveTotalQuantity((prevTotal) => prevTotal + quantity);
+     // Reset the displayed quantity back to zero between "-" & "+"
      setQuantity(0);
      // Mark as added to cart
      setAddedToCart(true);
     } 
   };
+
+  console.log("quantity", quantity)
+ 
+  console.log("totalQuantity", totalQuantity)
 
   return (
     <div className="row mt-4">
@@ -65,7 +67,7 @@ export default function AddToCartModule({ currentPrice } ) {
           </button>
         </div>
       </div>
-      {addedToCart && <div>quantité ajoutée au panier : {totaldisplayQuantity}</div>}
+      {addedToCart && <div>quantité ajoutée au panier : {totalQuantity}</div>}
     </div>
   );
 }

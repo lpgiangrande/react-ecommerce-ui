@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import NavBar from './components/NavBar'
 import ProductSection from './components/ProductSection'
 import CustomCarousel from './components/CustomCarousel'
@@ -7,10 +7,18 @@ import AddToCartModule from './components/AddToCartModule';
 import Footer from './components/Footer'
 
 function App() {
+
+  const [totalQuantity, setTotalQuantity] = useState(0);
+
+  // Callback function to update totalQuantity in App component
+  const handleTotalQuantityChange = (newTotalQuantity) => {
+    setTotalQuantity(newTotalQuantity);
+  };
+
   return (
     <div className="App">
-      <NavBar />
-        <ProductSection>
+      <NavBar totalQuantity={totalQuantity}/>
+        <ProductSection retrieveTotalQuantity={handleTotalQuantityChange}>
           <CustomCarousel />
           <ProductDescription />
           <AddToCartModule />

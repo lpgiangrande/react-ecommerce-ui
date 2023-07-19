@@ -6,7 +6,7 @@ import ProductDescription from './ProductDescription';
 import AddToCartModule from './AddToCartModule';
 import products from '../../products.json'; 
 
-export default function ProductSection() {
+export default function ProductSection({ retrieveTotalQuantity  }) {
   // Manage the active product state
   const [activeProduct, setActiveProduct] = useState(products.products[0]);
   console.log('active product', activeProduct.currentPrice);
@@ -28,7 +28,7 @@ export default function ProductSection() {
         <div className="col-md-6">
           <ProductDescription product={activeProduct} />
           {/* Pass the currentPrice as a prop to AddToCartModule */}
-          <AddToCartModule currentPrice={activeProduct.currentPrice} />
+          <AddToCartModule currentPrice={activeProduct.currentPrice} retrieveTotalQuantity={retrieveTotalQuantity} />
         </div>
       </div>
       <div className='mt-5'>
