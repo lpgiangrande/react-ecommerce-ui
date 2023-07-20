@@ -1,10 +1,15 @@
-#navbar{
-    border-bottom: 2px solid var(--light-grey);
+#underlinedNavbar{
+  border-bottom: 3px solid var(--light-grey);
+  height: 90px;
 }
 
 .avatar, .cartIcon {
   width: 25px;
   height: auto;
+}
+
+.cartIcon {
+  position: relative;
 }
 
 // BURGER
@@ -29,13 +34,25 @@
 // LINKS
 
 .navLinks a {
+  padding-bottom: 40px;
   color: var(--dark-grey);
   font-weight: bold;
+  position: relative;
+  padding-bottom: 40px;
   &:hover {
     color: var(--medium-grey);
     font-weight: bold;
   }
 }
+
+.navLink {
+  // position: relative;
+  &:hover {
+    border-bottom: 2px solid var(--orange);
+    transition: border-bottom 0.2s ease-in-out;
+  }
+}
+
 
 // MODAL 1
 
@@ -60,3 +77,10 @@
   width: 350px!important;
 }
 
+.itemQuantity{
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 0.9em;
+  position: absolute;
+  top: 1px;
+}
