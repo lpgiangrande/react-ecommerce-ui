@@ -1,0 +1,13 @@
+.checkOutButton{
+    cursor: pointer;
+    background-color: var(--light-orange);
+    color: var(--offwhite);
+    padding: 5px 40px;
+    border-radius: 10px;
+    font-size: 10px;
+    height: 30px;
+    border: none;
+    box-shadow: 1px 9px 19px -5px rgba(179,179,179,0.45);
+    -webkit-box-shadow: 1px 9px 19px -5px rgba(179,179,179,0.45);
+    -moz-box-shadow: 1px 9px 19px -5px rgba(179,179,179,0.45);
+}
