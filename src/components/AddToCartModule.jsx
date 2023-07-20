@@ -67,7 +67,6 @@ export default function AddToCartModule({ retrieveTotalQuantity }) {
           </button>
         </div>
       </div>
-      {addedToCart && <div>quantité ajoutée au panier : {totalQuantity}</div>}
     </div>
   );
 }
