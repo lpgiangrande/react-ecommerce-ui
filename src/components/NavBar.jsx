@@ -29,8 +29,8 @@ function Navigation({ totalQuantity }) {
 
   return (
     <>
-      <Navbar expand="md" id={styles.navbar} className="fixed-top mt-3 pb-4" collapseOnSelect={false}>
-        <Container>
+      <Navbar expand="md" id={styles.navbar} className="fixed-top mt-2 pb-4" collapseOnSelect={false}>
+        <Container id={styles.underlinedNavbar}>
           <div onClick={handleToggleFirstModal} className={`${styles.burgerIcon}`}>
             <div className={styles.burgerLine} />
             <div className={styles.burgerLine} />
@@ -41,11 +41,11 @@ function Navigation({ totalQuantity }) {
           </Navbar.Brand>
           <Navbar.Collapse id="basic-navbar-nav" className="order-2">
             <Nav className="me-auto pt-1">
-              <Nav.Link className="me-3" href="#link1">Collections</Nav.Link>
-              <Nav.Link className="me-3" href="#link2">Men</Nav.Link>
-              <Nav.Link className="me-3" href="#link3">Women</Nav.Link>
-              <Nav.Link className="me-3" href="#link4">About</Nav.Link>
-              <Nav.Link className="me-3" href="#link5">Contact</Nav.Link>
+              <Nav.Link className={`me-3 ${styles.navLink}`} href="#link1">Collections</Nav.Link>
+              <Nav.Link className={`me-3 ${styles.navLink}`} href="#link2">Men</Nav.Link>
+              <Nav.Link className={`me-3 ${styles.navLink}`} href="#link3">Women</Nav.Link>
+              <Nav.Link className={`me-3 ${styles.navLink}`} href="#link4">About</Nav.Link>
+              <Nav.Link className={`me-3 ${styles.navLink}`} href="#link5">Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
           <Nav className="ms-auto order-3 order-md-4 d-flex flex-row">
@@ -82,7 +82,7 @@ function Navigation({ totalQuantity }) {
                 </svg>
               </div>
               <div>
-                <span>{ totalQuantity }</span>
+                <span className={`ms-1 ${styles.itemQuantity}`}>{ totalQuantity }</span>
               </div>
             </Nav.Link>
             <Nav.Link href="#link7" className="d-flex align-items-center me-4">

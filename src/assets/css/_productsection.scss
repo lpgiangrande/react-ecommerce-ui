@@ -12,7 +12,6 @@
     -moz-box-shadow: 1px 9px 19px -5px rgba(179,179,179,0.45);
 }
 
-
 .buttonsQuantity {
     border-radius: 10px;
     background-color: var(--light-grey);
@@ -24,7 +23,7 @@
     & button {
         color: var(--orange);
         border: none;
-        background-color: var(--light-grey);
+        // background-color: var(--light-grey);
     }
   }
   
